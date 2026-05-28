@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BountyPilot Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="mark">BP</div>
+          <div>
+            <h1>BountyPilot</h1>
+            <p>AI opportunity agent</p>
+          </div>
+        </div>
+
+        <nav>
+          <button class="active">Opportunity score</button>
+          <button>Submission pack</button>
+          <button>Mantle proof</button>
+          <button>Safety gates</button>
+        </nav>
+
+        <section class="status">
+          <span class="dot"></span>
+          Dry-run mode
+        </section>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <h2>Turn noisy bounty boards into executable Web3 submissions.</h2>
+            <p>BountyPilot scores deadline, upside, execution fit, proof quality, and safety risk before it writes a submission pack.</p>
+          </div>
+          <a class="primary" href="../docs/SUBMISSION.md">Submission draft</a>
+        </header>
+
+        <section class="grid">
+          <article class="panel hero-panel">
+            <div class="panel-title">
+              <span>Selected target</span>
+              <strong>Score 123</strong>
+            </div>
+            <h3>The Turing Test Hackathon 2026</h3>
+            <p>Active DoraHacks target for AI agents on Mantle, with clear scoring criteria and a deployable proof path.</p>
+            <div class="metrics">
+              <div><span>Deadline</span><strong>2026-06-15</strong></div>
+              <div><span>Status</span><strong>Open</strong></div>
+              <div><span>Focus</span><strong>AI Agents / Mantle</strong></div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-title">
+              <span>Ranking</span>
+              <strong>live demo data</strong>
+            </div>
+            <ol class="rank-list">
+              <li><span>The Turing Test Hackathon</span><strong>123</strong></li>
+              <li><span>UiPath AgentHack 2026</span><strong>77</strong></li>
+              <li><span>web3.career opportunity pool</span><strong>66</strong></li>
+              <li><span>NandaHack Agentic AI</span><strong>64</strong></li>
+              <li class="expired"><span>The Bags Hackathon</span><strong>-85</strong></li>
+            </ol>
+          </article>
+
+          <article class="panel">
+            <div class="panel-title">
+              <span>Generated pack</span>
+              <strong>ready to submit</strong>
+            </div>
+            <ul class="check-list">
+              <li>README and problem statement</li>
+              <li>DoraHacks submission copy</li>
+              <li>2-minute demo video script</li>
+              <li>Mantle dry-run proof plan</li>
+            </ul>
+          </article>
+
+          <article class="panel wide">
+            <div class="panel-title">
+              <span>Mantle proof plan</span>
+              <strong>no wallet signature</strong>
+            </div>
+            <div class="split">
+              <div class="share">
+                <span>01</span>
+                <p>Record selected opportunity score and evidence hash</p>
+              </div>
+              <div class="share secondary">
+                <span>02</span>
+                <p>Deploy to Mantle only after wallet approval</p>
+              </div>
+            </div>
+            <pre>{
+  "contract": "BountyPilotScoreRegistry",
+  "network": "Mantle Sepolia testnet",
+  "evidenceURI": "ipfs://CID_OR_PUBLIC_JSON_URL",
+  "mode": "dry-run"
+}</pre>
+          </article>
+
+          <article class="panel wide safety">
+            <div class="panel-title">
+              <span>Safety gates</span>
+              <strong>human approval required</strong>
+            </div>
+            <div class="gates">
+              <span>No fake identity</span>
+              <span>No KYC automation</span>
+              <span>No wallet signing</span>
+              <span>No contract deploy</span>
+              <span>No prize guarantee</span>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
