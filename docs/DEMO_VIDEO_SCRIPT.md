@@ -8,45 +8,59 @@ Target length: 2 minutes.
 
 Show: dashboard with mixed active and expired opportunities.
 
-## 15-40s: Official Deadline Check
+## 15-35s: Official Deadline Check
 
 "BountyPilot treats official source verification as part of execution. A third-party listing made the Bags hackathon look open, but the DoraHacks page showed the submission period had already ended."
 
 Show: Bags ranked as expired, then The Turing Test Hackathon selected.
 
-## 40-65s: Ranking
+## 35-55s: Mantle AI DevTools readiness
 
-"BountyPilot scores opportunities by deadline, upside, AI/Web3 fit, execution effort, proof quality, and risk."
+"Mantle AI DevTools readiness: 80 / 100. Official deadline, public demo, chain data, and evidence hash are ready."
+
+Show:
+
+- selected target;
+- AI DevTools track;
+- Mantle audit card at `80 / 100`;
+- `chain data` and `evidence hash` tags.
+
+## 55-75s: Read-only Mantle data
+
+"Read-only Mantle data is live. mantle:data verifies Mainnet chain ID 5000 and Sepolia chain ID 5003 without wallet access."
 
 Run:
 
 ```bash
-npm run score
-```
-
-Show: The Turing Test Hackathon 2026 ranked first.
-
-## 65-90s: Submission Pack
-
-"Once it picks the target, it creates a practical submission pack instead of vague advice."
-
-Run:
-
-```bash
-npm run demo
+npm run mantle:data
 ```
 
 Show:
 
-- selected opportunity;
-- project tagline;
-- problem and solution;
-- demo flow;
-- risk flags.
+- Mantle Mainnet chain ID `5000`;
+- Mantle Sepolia chain ID `5003`;
+- latest block hashes and timestamps;
+- no wallet/private key/signature requirement.
 
-## 90-110s: Mantle Proof Plan
+## 75-100s: Evidence pack
 
-"For the Turing Test Hackathon, the project includes a Mantle-ready proof layer. The contract can record the chosen opportunity score, evidence URI, and evidence hash on-chain."
+"Evidence pack is public. mantle:evidence combines score, audit, chain observations, artifact URLs, safety gates, and dry-run proof."
+
+Run:
+
+```bash
+npm run mantle:evidence
+```
+
+Show:
+
+- public evidence JSON;
+- evidence hash;
+- dry-run Mantle proof record.
+
+## 100-120s: Safety close
+
+"No fake identity, KYC automation, wallet signing, token launch, or contract deploy. Sepolia deployment remains behind explicit human approval."
 
 Run:
 
@@ -56,11 +70,7 @@ npm run mantle:plan
 
 Show:
 
-- contract name;
-- target network;
-- dry-run record;
-- wallet approval gates.
-
-## 110-120s: Close
-
-"BountyPilot does not sign wallets, bypass captchas, fake identity, or deploy contracts without approval. It turns opportunity discovery into a safer, faster execution loop for AI agents and human builders."
+- contract name `BountyPilotScoreRegistry`;
+- target network `Mantle Sepolia testnet`;
+- evidence URI and hash;
+- human approval gates.
