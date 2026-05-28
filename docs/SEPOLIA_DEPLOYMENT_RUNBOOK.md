@@ -9,9 +9,11 @@ Use this only if the organizer confirms that a Sepolia deployment will materiall
 - RPC: `https://rpc.sepolia.mantle.xyz`
 - Explorer: `https://explorer.sepolia.mantle.xyz`
 - Contract: `contracts/BountyPilotScoreRegistry.sol`
+- AI-powered callable function: `recordAgentAudit`
 - Opportunity ID: `mantle-turing-test-2026`
 - Opportunity ID bytes32: `0x91af48c5e7e96b5f4e9c91dc24e10d311d7497ff2e16ed600f1fc68e5aa4f2ae`
-- Score: `123`
+- Opportunity ranking score: `123`
+- AI DevTools readiness score: `80`
 - Evidence URI: `https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/docs/evidence/latest.json`
 - Evidence hash: `0x2ae1b9e3ba104263de612d9c104f9afd2acaf9de7ebc42027b7ac7333ce1f338`
 
@@ -41,9 +43,9 @@ These steps require Michael to be present and approve each wallet action.
 2. Confirm the wallet has testnet gas.
 3. Compile `BountyPilotScoreRegistry.sol` with Solidity `0.8.20` or newer.
 4. Deploy `BountyPilotScoreRegistry` to Mantle Sepolia.
-5. Call `recordScore` with:
+5. Call `recordAgentAudit` with:
    - `opportunityId`: `0x91af48c5e7e96b5f4e9c91dc24e10d311d7497ff2e16ed600f1fc68e5aa4f2ae`
-   - `score`: `123`
+   - `readinessScore`: `80`
    - `evidenceURI`: `https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/docs/evidence/latest.json`
    - `evidenceHash`: `0x2ae1b9e3ba104263de612d9c104f9afd2acaf9de7ebc42027b7ac7333ce1f338`
 6. Copy the deployed contract address, record transaction hash, and explorer links.

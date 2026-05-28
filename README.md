@@ -73,6 +73,8 @@ The contract can record:
 
 This gives the project a practical on-chain proof surface for the Turing Test Hackathon while keeping real deployment behind explicit wallet approval.
 
+For the deployment award path, the contract also exposes `recordAgentAudit`, a callable function for writing the `80 / 100` AI audit result and evidence hash on-chain after wallet approval.
+
 ## Mantle AI DevTools Audit
 
 BountyPilot now includes a pre-submit audit command for the Turing Test Hackathon:
@@ -151,6 +153,7 @@ BountyPilot is intentionally conservative:
 - `docs/SUBMISSION.md` - DoraHacks/GitHub submission draft
 - `docs/DEMO_VIDEO_SCRIPT.md` - 2-minute demo video script
 - `docs/MANTLE_PROOF.md` - Mantle proof/deployment boundary
+- `docs/JUDGING_FIT.md` - prize and criteria fit matrix
 - `docs/SEPOLIA_DEPLOYMENT_RUNBOOK.md` - wallet-gated Mantle Sepolia deployment checklist
 - `docs/BAGS_INTEGRATION.md` - legacy wallet/API safety notes
 - `demo/index.html` - local browser demo for the pitch video

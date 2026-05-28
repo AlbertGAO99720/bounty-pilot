@@ -31,12 +31,20 @@ export function buildMantleDeploymentPlan(opportunity, options = {}) {
     contract: {
       name: "BountyPilotScoreRegistry",
       path: "contracts/BountyPilotScoreRegistry.sol",
-      purpose: "Records the selected opportunity score, evidence URI, and evidence hash on-chain."
+      purpose: "Records the selected opportunity score or AI audit readiness score, evidence URI, and evidence hash on-chain."
     },
     dryRunRecord: {
       opportunityId: opportunity.id,
       opportunityIdBytes32: `0x${sha256Hex(opportunity.id)}`,
       score: opportunity.score,
+      evidenceURI: options.evidenceURI || "ipfs://CID_OR_PUBLIC_JSON_URL_AFTER_REPO_PUBLISH",
+      evidenceHash: `0x${evidenceHash}`
+    },
+    agentAuditRecord: {
+      functionName: "recordAgentAudit",
+      opportunityId: opportunity.id,
+      opportunityIdBytes32: `0x${sha256Hex(opportunity.id)}`,
+      readinessScore: options.readinessScore ?? null,
       evidenceURI: options.evidenceURI || "ipfs://CID_OR_PUBLIC_JSON_URL_AFTER_REPO_PUBLISH",
       evidenceHash: `0x${evidenceHash}`
     },
@@ -55,7 +63,8 @@ async function readPublishedEvidenceOptions(path = DEFAULT_EVIDENCE_PATH) {
     const evidence = JSON.parse(await readFile(path, "utf8"));
     return {
       evidenceURI: evidence.publicArtifacts?.evidenceURI,
-      evidenceHash: evidence.evidenceHash
+      evidenceHash: evidence.evidenceHash,
+      readinessScore: evidence.mantleAudit?.readinessScore
     };
   } catch {
     return {};

@@ -31,8 +31,10 @@ npm run mantle:plan
 The repo is submission-ready as a dry-run AI DevTools prototype. The shortest credible upgrade is now narrower:
 
 1. Deploy `contracts/BountyPilotScoreRegistry.sol` to Mantle Sepolia after explicit wallet approval.
-2. Put the deployed address and explorer link in README, DoraHacks, and the evidence pack.
-3. Record the deployed proof in the demo video if a final replacement video is needed.
+2. Verify the contract on Mantle Explorer.
+3. Call `recordAgentAudit` with readiness score `80`, the current evidence URI, and the evidence hash.
+4. Put the deployed address, record transaction, and explorer links in README, DoraHacks, and the evidence pack.
+5. Record the deployed proof in the demo video if a final replacement video is needed.
 
 ## What I Can Do Without Extra Authorization
 

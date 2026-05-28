@@ -17,6 +17,8 @@ The contract records:
 - submitter address;
 - block timestamp.
 
+The deployment-award path uses `recordAgentAudit` to write the `80 / 100` AI audit readiness score, evidence URI, and evidence hash on-chain. The original `recordScore` function remains available for generic score records, including the `123` opportunity ranking score.
+
 ## Dry-Run Command
 
 ```bash
@@ -80,6 +82,7 @@ Real deployment requires:
 - Mantle Sepolia or Mantle mainnet RPC selection;
 - funded wallet for gas;
 - contract verification on Mantle Explorer if pursuing the deployment award;
+- calling `recordAgentAudit` with the current evidence hash;
 - deployed address added to README and DoraHacks submission.
 
 Do not store private keys or seed phrases in the repo, shell history, screenshots, or demo video.

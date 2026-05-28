@@ -104,10 +104,18 @@
     "safety": "No wallet, private key, signature, transaction, or deployment is used."
   },
   "mantleProofPlan": {
+    "agentAuditRecord": {
+      "evidenceHash": "0x2ae1b9e3ba104263de612d9c104f9afd2acaf9de7ebc42027b7ac7333ce1f338",
+      "evidenceURI": "https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/docs/evidence/latest.json",
+      "functionName": "recordAgentAudit",
+      "opportunityId": "mantle-turing-test-2026",
+      "opportunityIdBytes32": "0x91af48c5e7e96b5f4e9c91dc24e10d311d7497ff2e16ed600f1fc68e5aa4f2ae",
+      "readinessScore": 80
+    },
     "contract": {
       "name": "BountyPilotScoreRegistry",
       "path": "contracts/BountyPilotScoreRegistry.sol",
-      "purpose": "Records the selected opportunity score, evidence URI, and evidence hash on-chain."
+      "purpose": "Records the selected opportunity score or AI audit readiness score, evidence URI, and evidence hash on-chain."
     },
     "dryRunRecord": {
       "evidenceHash": "0x2ae1b9e3ba104263de612d9c104f9afd2acaf9de7ebc42027b7ac7333ce1f338",

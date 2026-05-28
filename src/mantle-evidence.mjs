@@ -68,7 +68,8 @@ export async function buildMantleEvidencePack() {
   const mantleProofPlan = buildMantleDeploymentPlan(best, {
     evidenceURI: PUBLIC_EVIDENCE_URI,
     evidenceHash,
-    evidencePayload: evidenceCore
+    evidencePayload: evidenceCore,
+    readinessScore: mantleAudit.readinessScore
   });
 
   return {

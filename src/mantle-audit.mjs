@@ -29,7 +29,7 @@ const CHECKS = [
     label: "Mantle proof surface exists",
     status: "dry-run-ready",
     weight: 18,
-    evidence: "BountyPilotScoreRegistry can record opportunity score and evidence hash."
+    evidence: "BountyPilotScoreRegistry can record opportunity score, AI audit readiness score, and evidence hash."
   },
   {
     id: "safety-boundary",
@@ -84,9 +84,9 @@ export function buildMantleAgentAudit(opportunity) {
     checks,
     blockers,
     nextPatch:
-      "Deploy BountyPilotScoreRegistry to Mantle Sepolia after wallet approval and add the explorer link to the submission.",
+      "Deploy BountyPilotScoreRegistry to Mantle Sepolia after wallet approval, call recordAgentAudit, and add explorer links to the submission.",
     dorahacksCopy:
-      "BountyPilot is an AI DevTools agent that audits Web3 hackathon opportunities before a builder spends time or gas. It verifies official deadlines, scores fit and risk, generates a submission pack, and prepares a Mantle evidence hash that can be recorded on-chain after wallet approval."
+      "BountyPilot is an AI DevTools agent that audits Web3 hackathon opportunities before a builder spends time or gas. It verifies official deadlines, scores fit and risk, generates a submission pack, and prepares a Mantle evidence hash plus AI audit score that can be recorded on-chain after wallet approval."
   };
 }
 
