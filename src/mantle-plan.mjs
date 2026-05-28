@@ -1,7 +1,10 @@
+import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { sha256Hex, stableJson } from "./hash.mjs";
 import { opportunities } from "./opportunities.mjs";
 import { rankOpportunities } from "./scoring.mjs";
+
+const DEFAULT_EVIDENCE_PATH = "docs/evidence/latest.json";
 
 export function buildMantleDeploymentPlan(opportunity, options = {}) {
   const evidencePayload = options.evidencePayload || {
@@ -21,7 +24,7 @@ export function buildMantleDeploymentPlan(opportunity, options = {}) {
     riskFlags: opportunity.riskFlags
   };
 
-  const evidenceHash = options.evidenceHash || sha256Hex(stableJson(evidencePayload));
+  const evidenceHash = (options.evidenceHash || sha256Hex(stableJson(evidencePayload))).replace(/^0x/i, "");
 
   return {
     targetNetwork: options.network || "Mantle Sepolia testnet",
@@ -47,8 +50,20 @@ export function buildMantleDeploymentPlan(opportunity, options = {}) {
   };
 }
 
+async function readPublishedEvidenceOptions(path = DEFAULT_EVIDENCE_PATH) {
+  try {
+    const evidence = JSON.parse(await readFile(path, "utf8"));
+    return {
+      evidenceURI: evidence.publicArtifacts?.evidenceURI,
+      evidenceHash: evidence.evidenceHash
+    };
+  } catch {
+    return {};
+  }
+}
+
 if (fileURLToPath(import.meta.url) === process.argv[1]) {
   const [best] = rankOpportunities(opportunities);
-  const plan = buildMantleDeploymentPlan(best);
+  const plan = buildMantleDeploymentPlan(best, await readPublishedEvidenceOptions());
   console.log(JSON.stringify(plan, null, 2));
 }

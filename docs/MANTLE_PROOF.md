@@ -53,7 +53,7 @@ The evidence command writes:
 Latest evidence hash:
 
 ```text
-0x998cfaba1815a15a1b35e66fb8b7c1d54e2c43f55faa08edb9e1ac6741b9baa7
+0x2ae1b9e3ba104263de612d9c104f9afd2acaf9de7ebc42027b7ac7333ce1f338
 ```
 
 The proof-plan command outputs:

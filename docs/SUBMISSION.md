@@ -92,7 +92,7 @@ https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/docs/evidence
 Latest evidence hash:
 
 ```text
-0x998cfaba1815a15a1b35e66fb8b7c1d54e2c43f55faa08edb9e1ac6741b9baa7
+0x2ae1b9e3ba104263de612d9c104f9afd2acaf9de7ebc42027b7ac7333ce1f338
 ```
 
 The evidence pack includes the selected opportunity, score breakdown, AI DevTools readiness audit, read-only Mantle Mainnet/Sepolia chain-state checks, public artifact URLs, safety gates, and the dry-run Mantle proof record.

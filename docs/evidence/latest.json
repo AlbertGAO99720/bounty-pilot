@@ -1,6 +1,6 @@
 {
-  "evidenceHash": "0x998cfaba1815a15a1b35e66fb8b7c1d54e2c43f55faa08edb9e1ac6741b9baa7",
-  "generatedAt": "2026-05-28T02:44:58.164Z",
+  "evidenceHash": "0x2ae1b9e3ba104263de612d9c104f9afd2acaf9de7ebc42027b7ac7333ce1f338",
+  "generatedAt": "2026-05-28T03:11:06.620Z",
   "hashAlgorithm": "sha256",
   "hashScope": "canonical stable JSON of this evidence pack before hashAlgorithm, hashScope, evidenceHash, and mantleProofPlan are appended",
   "mantleAudit": {
@@ -75,15 +75,15 @@
     "verdict": "Submission-ready as a dry-run AI DevTools prototype with read-only Mantle data; strongest remaining upgrade is approved testnet deployment."
   },
   "mantleData": {
-    "generatedAt": "2026-05-28T02:44:58.164Z",
+    "generatedAt": "2026-05-28T03:11:06.620Z",
     "mode": "read-only",
     "networks": [
       {
         "expectedChainId": 5000,
         "explorer": "https://explorer.mantle.xyz",
-        "latestBlock": 95902991,
-        "latestBlockHash": "0x6971c65b9e42195d518ce511853cf51d08e4c23a197197f1205184a84e171564",
-        "latestBlockTimestamp": "2026-05-28T02:44:54.000Z",
+        "latestBlock": 95903775,
+        "latestBlockHash": "0xacde36b38f40d15491156e7490d4ac93461badb19c8de3d1cea9846674669656",
+        "latestBlockTimestamp": "2026-05-28T03:11:02.000Z",
         "name": "Mantle Mainnet",
         "observedChainId": 5000,
         "rpc": "https://rpc.mantle.xyz",
@@ -92,9 +92,9 @@
       {
         "expectedChainId": 5003,
         "explorer": "https://explorer.sepolia.mantle.xyz",
-        "latestBlock": 39195808,
-        "latestBlockHash": "0x00ca6b0338cd6a510e0f4d020e6169f9e79df1b7e8156259e2cc4877eb07da75",
-        "latestBlockTimestamp": "2026-05-28T02:44:49.000Z",
+        "latestBlock": 39196594,
+        "latestBlockHash": "0x71d3bdab67eb450572f687bc366ea8d571ac612bc0756e72210e40a5c5a25301",
+        "latestBlockTimestamp": "2026-05-28T03:11:01.000Z",
         "name": "Mantle Sepolia",
         "observedChainId": 5003,
         "rpc": "https://rpc.sepolia.mantle.xyz",
@@ -110,7 +110,7 @@
       "purpose": "Records the selected opportunity score, evidence URI, and evidence hash on-chain."
     },
     "dryRunRecord": {
-      "evidenceHash": "0x998cfaba1815a15a1b35e66fb8b7c1d54e2c43f55faa08edb9e1ac6741b9baa7",
+      "evidenceHash": "0x2ae1b9e3ba104263de612d9c104f9afd2acaf9de7ebc42027b7ac7333ce1f338",
       "evidenceURI": "https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/docs/evidence/latest.json",
       "opportunityId": "mantle-turing-test-2026",
       "opportunityIdBytes32": "0x91af48c5e7e96b5f4e9c91dc24e10d311d7497ff2e16ed600f1fc68e5aa4f2ae",

@@ -122,7 +122,7 @@ Latest evidence artifact:
 
 - `docs/evidence/latest.json`
 - Evidence URI: https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/docs/evidence/latest.json
-- Evidence hash: `0x998cfaba1815a15a1b35e66fb8b7c1d54e2c43f55faa08edb9e1ac6741b9baa7`
+- Evidence hash: `0x2ae1b9e3ba104263de612d9c104f9afd2acaf9de7ebc42027b7ac7333ce1f338`
 
 ## Safety Boundary
 
@@ -151,6 +151,7 @@ BountyPilot is intentionally conservative:
 - `docs/SUBMISSION.md` - DoraHacks/GitHub submission draft
 - `docs/DEMO_VIDEO_SCRIPT.md` - 2-minute demo video script
 - `docs/MANTLE_PROOF.md` - Mantle proof/deployment boundary
+- `docs/SEPOLIA_DEPLOYMENT_RUNBOOK.md` - wallet-gated Mantle Sepolia deployment checklist
 - `docs/BAGS_INTEGRATION.md` - legacy wallet/API safety notes
 - `demo/index.html` - local browser demo for the pitch video
 
