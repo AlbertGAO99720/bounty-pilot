@@ -24,6 +24,7 @@ npm run mantle:audit
 npm run mantle:data
 npm run mantle:evidence
 npm run mantle:plan
+npm run mantle:deployment-pack
 ```
 
 ## Technical Upgrade Before Final Judging
@@ -41,6 +42,7 @@ The repo is submission-ready as a dry-run AI DevTools prototype. The shortest cr
 - Keep improving repo files and public documentation.
 - Generate README, pitch, demo script, submission text, and evidence JSON.
 - Build local scoring, audit, demo, read-only Mantle data, and dry-run proof logic.
+- Generate the wallet-safe Mantle deployment pack.
 - Open login/submission pages in the isolated Chrome window.
 
 ## What Needs Michael Approval

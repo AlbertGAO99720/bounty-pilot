@@ -11,6 +11,8 @@
     "mantle:data": "node src/mantle-data.mjs",
     "mantle:evidence": "node src/mantle-evidence.mjs --write docs/evidence/latest.json",
     "mantle:plan": "node src/mantle-plan.mjs",
+    "mantle:compile": "node src/mantle-compile.mjs",
+    "mantle:deployment-pack": "node src/mantle-deployment-pack.mjs",
     "bags:plan": "node src/bags-plan.mjs"
   },
   "keywords": [

@@ -26,6 +26,7 @@ npm run score
 npm run mantle:audit
 npm run mantle:data
 npm run mantle:plan
+npm run mantle:deployment-pack
 ```
 
 Confirm:
@@ -34,6 +35,17 @@ Confirm:
 - `mantle:data` reports Mantle Mainnet chain ID `5000`;
 - `mantle:data` reports Mantle Sepolia chain ID `5003`;
 - `mantle:plan` uses the public evidence URI and the current evidence hash above.
+- `mantle:deployment-pack` writes `docs/MANTLE_DEPLOYMENT_PACK.md` and local build artifacts under `build/mantle/`.
+
+## Generated Deployment Pack
+
+The deployment pack is the handoff file for the wallet-gated steps:
+
+```bash
+npm run mantle:deployment-pack
+```
+
+It compiles the contract, verifies the evidence hash, and prints the exact `recordAgentAudit` arguments. It does not deploy, sign, send transactions, read private keys, or touch KYC.
 
 ## Wallet-Gated Steps
 

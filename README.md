@@ -47,6 +47,7 @@ npm run mantle:audit
 npm run mantle:data
 npm run mantle:evidence
 npm run mantle:plan
+npm run mantle:deployment-pack
 ```
 
 There is also a browser demo for recording:
@@ -147,12 +148,15 @@ BountyPilot is intentionally conservative:
 - `src/mantle-data.mjs` - read-only Mantle RPC data adapter
 - `src/mantle-evidence.mjs` - public evidence pack and hash generator
 - `src/mantle-plan.mjs` - dry-run Mantle proof/deployment plan
+- `src/mantle-compile.mjs` - Solidity compile step for the Mantle registry
+- `src/mantle-deployment-pack.mjs` - wallet-safe deployment pack generator
 - `contracts/BountyPilotScoreRegistry.sol` - minimal on-chain score registry
 - `src/bags-plan.mjs` - legacy dry-run Bags fee-share plan
 - `docs/RESEARCH.md` - source-backed opportunity notes
 - `docs/SUBMISSION.md` - DoraHacks/GitHub submission draft
 - `docs/DEMO_VIDEO_SCRIPT.md` - 2-minute demo video script
 - `docs/MANTLE_PROOF.md` - Mantle proof/deployment boundary
+- `docs/MANTLE_DEPLOYMENT_PACK.md` - generated Sepolia deployment handoff
 - `docs/JUDGING_FIT.md` - prize and criteria fit matrix
 - `docs/SEPOLIA_DEPLOYMENT_RUNBOOK.md` - wallet-gated Mantle Sepolia deployment checklist
 - `docs/BAGS_INTEGRATION.md` - legacy wallet/API safety notes
