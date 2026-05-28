@@ -21,6 +21,7 @@ The contract records:
 
 ```bash
 npm run mantle:audit
+npm run mantle:data
 npm run mantle:plan
 ```
 
@@ -31,6 +32,13 @@ The audit command outputs:
 - artifact checks;
 - remaining blockers;
 - updated DoraHacks positioning copy.
+
+The data command outputs:
+
+- Mantle Mainnet chain ID and latest block;
+- Mantle Sepolia chain ID and latest block;
+- block hashes and timestamps for public evidence;
+- a safety note confirming read-only mode.
 
 The proof-plan command outputs:
 

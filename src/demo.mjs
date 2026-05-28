@@ -32,6 +32,7 @@ const submissionPack = {
       "Run npm run score to rank opportunities.",
       "Run npm run demo to generate the selected submission pack.",
       "Run npm run mantle:audit to check AI DevTools readiness and blockers.",
+      "Run npm run mantle:data to read Mantle chain state without wallet access.",
       "Run npm run mantle:plan to produce a dry-run Mantle deployment proof.",
       "Use the generated docs as the DoraHacks/GitHub/demo video submission base."
     ]

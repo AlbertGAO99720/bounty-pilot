@@ -22,7 +22,7 @@ https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/bounty-pilot-
 
 ## Target Track
 
-The Turing Test Hackathon 2026. Current best-fit track is AI DevTools because BountyPilot audits opportunity fit, safety risk, evidence quality, and Mantle proof readiness before an agent spends time or gas. Backup fit is Alpha & Data if the next build adds Mantle on-chain data ingestion.
+The Turing Test Hackathon 2026. Current best-fit track is AI DevTools because BountyPilot audits opportunity fit, safety risk, evidence quality, read-only Mantle chain data, and proof readiness before an agent spends time or gas. Backup fit is Alpha & Data if the next build expands the Mantle data adapter into richer on-chain analytics.
 
 ## Short Description
 
@@ -32,7 +32,7 @@ BountyPilot ranks Web3 and AI opportunities by deadline, upside, fit, effort, pr
 
 BountyPilot helps builders and AI agents avoid wasting time on stale task boards, expired hackathons, vague bounties, and unsafe account flows. It scans monetizable opportunities, ranks them using an explicit scoring model, and generates the practical artifacts needed to execute: target rationale, README outline, demo script, risk flags, safety gates, and a Mantle proof/deployment plan.
 
-For The Turing Test Hackathon 2026, BountyPilot demonstrates an AI DevTools workflow: verify the official deadline, reject stale listings, score project-track fit, generate a submission pack, and prepare a verifiable evidence hash. The repo includes a runnable dashboard, scoring CLI, `mantle:audit` readiness command, submission generator, demo video, and a minimal Solidity contract that can record the selected score and evidence hash on Mantle after human wallet approval.
+For The Turing Test Hackathon 2026, BountyPilot demonstrates an AI DevTools workflow: verify the official deadline, reject stale listings, score project-track fit, read public Mantle chain state, generate a submission pack, and prepare a verifiable evidence hash. The repo includes a runnable dashboard, scoring CLI, `mantle:audit` readiness command, `mantle:data` read-only RPC adapter, submission generator, demo video, and a minimal Solidity contract that can record the selected score and evidence hash on Mantle after human wallet approval.
 
 ## Safety Note
 

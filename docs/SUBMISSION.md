@@ -16,7 +16,7 @@ Best-fit track: AI DevTools.
 
 Why: BountyPilot audits whether an AI/Web3 project is worth submitting before a builder spends time, wallet approvals, or gas. It verifies deadlines, scores fit and risk, produces a submission pack, and prepares a Mantle evidence hash that can be recorded on-chain after wallet approval.
 
-Backup fit: Alpha & Data, if the next build adds read-only Mantle on-chain data ingestion.
+Backup fit: Alpha & Data, if the next build expands the current read-only Mantle data adapter into richer on-chain analytics.
 
 ## Problem
 
@@ -45,6 +45,7 @@ For the Turing Test Hackathon, the repo includes a minimal `BountyPilotScoreRegi
 - Selects The Turing Test Hackathon 2026 as the best active Web3 target.
 - Generates a complete project submission pack.
 - Runs a Mantle `AI DevTools` readiness audit with explicit blockers.
+- Reads Mantle Mainnet and Mantle Sepolia public chain state without wallet access.
 - Generates a dry-run Mantle proof record.
 - Provides a local browser dashboard for demo recording.
 - Documents safety boundaries around wallets, KYC, deployment, and irreversible submissions.
@@ -74,12 +75,12 @@ Current status: contract code and dry-run transaction payload are ready. Real de
 npm run score
 npm run demo
 npm run mantle:audit
+npm run mantle:data
 npm run mantle:plan
 ```
 
 ## What Is Next
 
-- Add read-only Mantle RPC or explorer evidence ingestion.
 - Deploy `BountyPilotScoreRegistry` to Mantle Sepolia after wallet approval.
 - Add deployed address and explorer link to README and DoraHacks.
 

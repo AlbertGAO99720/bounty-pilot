@@ -44,6 +44,7 @@ Backup targets:
 npm run score
 npm run demo
 npm run mantle:audit
+npm run mantle:data
 npm run mantle:plan
 ```
 
@@ -84,11 +85,29 @@ The audit checks whether the project has the artifacts an AI DevTools submission
 - official deadline verification;
 - public repo, demo, and demo video;
 - inspectable scoring logic;
+- read-only Mantle Mainnet and Mantle Sepolia chain-state checks;
 - Mantle evidence-hash proof surface;
 - explicit wallet and KYC safety gates;
 - remaining blockers before a stronger Mantle testnet submission.
 
-Current verdict: submission-ready as a dry-run AI DevTools prototype, with the strongest next upgrade being a read-only Mantle data adapter or an approved Mantle Sepolia deployment.
+Current verdict: submission-ready as a dry-run AI DevTools prototype with read-only Mantle data, with the strongest next upgrade being an approved Mantle Sepolia deployment.
+
+## Read-Only Mantle Data Adapter
+
+BountyPilot can read public Mantle chain state without a wallet:
+
+```bash
+npm run mantle:data
+```
+
+The command checks:
+
+- Mantle Mainnet chain ID `5000`;
+- Mantle Sepolia chain ID `5003`;
+- latest block number, block hash, and timestamp;
+- explorer URLs for evidence review.
+
+It does not sign messages, send transactions, deploy contracts, or require private keys.
 
 ## Safety Boundary
 
@@ -108,6 +127,7 @@ BountyPilot is intentionally conservative:
 - `src/scoring.mjs` - ranking logic
 - `src/demo.mjs` - full submission-pack generator
 - `src/mantle-audit.mjs` - AI DevTools readiness audit for Mantle submissions
+- `src/mantle-data.mjs` - read-only Mantle RPC data adapter
 - `src/mantle-plan.mjs` - dry-run Mantle proof/deployment plan
 - `contracts/BountyPilotScoreRegistry.sol` - minimal on-chain score registry
 - `src/bags-plan.mjs` - legacy dry-run Bags fee-share plan

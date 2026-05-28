@@ -41,9 +41,9 @@ const CHECKS = [
   {
     id: "mantle-data-adapter",
     label: "Mantle-specific data adapter",
-    status: "next-build",
+    status: "ready",
     weight: 16,
-    evidence: "Next step: add read-only Mantle RPC or explorer evidence before testnet deployment."
+    evidence: "npm run mantle:data reads Mantle Mainnet and Mantle Sepolia chain state without wallet access."
   },
   {
     id: "testnet-deployment",
@@ -80,11 +80,11 @@ export function buildMantleAgentAudit(opportunity) {
     readinessScore,
     maxScore,
     verdict:
-      "Submission-ready as a dry-run AI DevTools prototype; stronger prize fit after a Mantle read-only adapter or approved testnet deployment.",
+      "Submission-ready as a dry-run AI DevTools prototype with read-only Mantle data; strongest remaining upgrade is approved testnet deployment.",
     checks,
     blockers,
     nextPatch:
-      "Add read-only Mantle RPC/explorer evidence ingestion, then deploy BountyPilotScoreRegistry to Mantle Sepolia after wallet approval.",
+      "Deploy BountyPilotScoreRegistry to Mantle Sepolia after wallet approval and add the explorer link to the submission.",
     dorahacksCopy:
       "BountyPilot is an AI DevTools agent that audits Web3 hackathon opportunities before a builder spends time or gas. It verifies official deadlines, scores fit and risk, generates a submission pack, and prepares a Mantle evidence hash that can be recorded on-chain after wallet approval."
   };
