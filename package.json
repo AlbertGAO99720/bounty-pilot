@@ -1,0 +1,22 @@
+{
+  "name": "bounty-pilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "An AI agent that finds monetizable Web3/AI opportunities, scores execution risk, and prepares Mantle-ready proof plans.",
+  "scripts": {
+    "demo": "node src/demo.mjs",
+    "score": "node src/score.mjs",
+    "mantle:plan": "node src/mantle-plan.mjs",
+    "bags:plan": "node src/bags-plan.mjs"
+  },
+  "keywords": [
+    "ai-agent",
+    "web3",
+    "bounties",
+    "dorahacks",
+    "bags",
+    "solana"
+  ],
+  "license": "MIT"
+}
