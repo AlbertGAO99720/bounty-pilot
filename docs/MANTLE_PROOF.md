@@ -20,10 +20,19 @@ The contract records:
 ## Dry-Run Command
 
 ```bash
+npm run mantle:audit
 npm run mantle:plan
 ```
 
-The command outputs:
+The audit command outputs:
+
+- recommended track;
+- readiness score;
+- artifact checks;
+- remaining blockers;
+- updated DoraHacks positioning copy.
+
+The proof-plan command outputs:
 
 - target network;
 - contract path;

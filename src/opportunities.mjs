@@ -14,10 +14,11 @@ export const opportunities = [
       "Submit open-source repo, runnable demo, and project pitch",
       "Deploy on Mantle Network for Grand Champion, Alpha/Data, and AI/RWA tracks",
       "Use Mantle on-chain data as a core data source for Alpha/Data",
+      "Build AI DevTools such as submission audits, smart gas tooling, or Mantle-specific assistants",
       "Use Byreal Agent Skills, Byreal Perps CLI, or RealClaw for Agentic Economy",
       "Demo video or public frontend link required for UI/deployment awards"
     ],
-    fitNotes: "Best active Web3 target: still open on DoraHacks, strong AI-agent/on-chain narrative, and clear scoring criteria. Real deployment remains gated behind wallet approval.",
+    fitNotes: "Best active Web3 target: still open on DoraHacks, strong AI DevTools/on-chain proof narrative, and clear scoring criteria. Real deployment remains gated behind wallet approval.",
     effortDays: 7,
     directCashSpeed: 1,
     upside: 9,

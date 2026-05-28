@@ -3,11 +3,11 @@
 ## Immediate Path
 
 1. Public GitHub repository is live:
-   - https://github.com/MichaelBIN720/bounty-pilot
+   - https://github.com/AlbertGAO99720/bounty-pilot
 2. Public demo page is live:
-   - https://michaelbin720.github.io/bounty-pilot/demo/
+   - https://albertgao99720.github.io/bounty-pilot/demo/
 3. Demo video is live:
-   - https://raw.githubusercontent.com/MichaelBIN720/bounty-pilot/main/bounty-pilot-demo.mp4
+   - https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/bounty-pilot-demo.mp4
 4. Open the DoraHacks Turing Test Hackathon page:
    - https://dorahacks.io/hackathon/mantleturingtesthackathon2026/detail
 5. Register as hacker if the account is not already registered.

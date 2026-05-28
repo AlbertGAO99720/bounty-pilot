@@ -13,7 +13,7 @@ export function buildMantleDeploymentPlan(opportunity, options = {}) {
     opportunityName: opportunity.name,
     deadline: opportunity.deadline,
     selectedScore: opportunity.score,
-    selectedTrack: options.track || "Agentic Economy / AI Alpha & Data pre-submit",
+    selectedTrack: options.track || "AI DevTools pre-submit audit",
     modelVersion: "bounty-pilot-score-v0.2",
     proofScope: [
       "opportunity ranking",

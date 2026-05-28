@@ -7,16 +7,18 @@
   "scripts": {
     "demo": "node src/demo.mjs",
     "score": "node src/score.mjs",
+    "mantle:audit": "node src/mantle-audit.mjs",
     "mantle:plan": "node src/mantle-plan.mjs",
     "bags:plan": "node src/bags-plan.mjs"
   },
   "keywords": [
     "ai-agent",
+    "ai-devtools",
     "web3",
     "bounties",
     "dorahacks",
-    "bags",
-    "solana"
+    "mantle",
+    "solidity"
   ],
   "license": "MIT"
 }

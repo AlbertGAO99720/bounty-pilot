@@ -24,8 +24,9 @@ Primary target: The Turing Test Hackathon 2026 on DoraHacks.
 - Official page: https://dorahacks.io/hackathon/mantleturingtesthackathon2026/detail
 - Deadline: 2026-06-15 23:59
 - Prize pool shown on DoraHacks: $100,000 for the current phase
-- Focus: Mantle Network, AI agents, on-chain data, trading, RWA, Byreal/RealClaw
-- Requirements: open-source repo, runnable demo, project pitch, and a Mantle or Byreal-aligned deployment path
+- Selected track: AI DevTools
+- Focus: Mantle Network, AI agents, on-chain data, scoring transparency, proof records
+- Requirements: open-source repo, runnable demo, project pitch, and a Mantle-aligned deployment path
 
 Former target now rejected:
 
@@ -42,6 +43,7 @@ Backup targets:
 ```bash
 npm run score
 npm run demo
+npm run mantle:audit
 npm run mantle:plan
 ```
 
@@ -69,6 +71,25 @@ The contract can record:
 
 This gives the project a practical on-chain proof surface for the Turing Test Hackathon while keeping real deployment behind explicit wallet approval.
 
+## Mantle AI DevTools Audit
+
+BountyPilot now includes a pre-submit audit command for the Turing Test Hackathon:
+
+```bash
+npm run mantle:audit
+```
+
+The audit checks whether the project has the artifacts an AI DevTools submission needs:
+
+- official deadline verification;
+- public repo, demo, and demo video;
+- inspectable scoring logic;
+- Mantle evidence-hash proof surface;
+- explicit wallet and KYC safety gates;
+- remaining blockers before a stronger Mantle testnet submission.
+
+Current verdict: submission-ready as a dry-run AI DevTools prototype, with the strongest next upgrade being a read-only Mantle data adapter or an approved Mantle Sepolia deployment.
+
 ## Safety Boundary
 
 BountyPilot is intentionally conservative:
@@ -86,6 +107,7 @@ BountyPilot is intentionally conservative:
 - `src/opportunities.mjs` - current opportunity dataset
 - `src/scoring.mjs` - ranking logic
 - `src/demo.mjs` - full submission-pack generator
+- `src/mantle-audit.mjs` - AI DevTools readiness audit for Mantle submissions
 - `src/mantle-plan.mjs` - dry-run Mantle proof/deployment plan
 - `contracts/BountyPilotScoreRegistry.sol` - minimal on-chain score registry
 - `src/bags-plan.mjs` - legacy dry-run Bags fee-share plan
