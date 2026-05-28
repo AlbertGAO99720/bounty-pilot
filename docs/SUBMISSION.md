@@ -14,7 +14,7 @@ Primary: The Turing Test Hackathon 2026 on DoraHacks.
 
 Best-fit track: AI DevTools.
 
-Why: BountyPilot audits whether an AI/Web3 project is worth submitting before a builder spends time, wallet approvals, or gas. It verifies deadlines, scores fit and risk, produces a submission pack, and prepares a Mantle evidence hash that can be recorded on-chain after wallet approval.
+Why: BountyPilot audits whether an AI/Web3 project is worth submitting before a builder spends time, wallet approvals, or gas. It verifies deadlines, scores fit and risk, produces a submission pack, and prepares a Mantle evidence hash plus AI audit readiness score that can be recorded on-chain after wallet approval.
 
 Backup fit: Alpha & Data, if the next build expands the current read-only Mantle data adapter into richer on-chain analytics.
 
@@ -36,7 +36,7 @@ BountyPilot ranks monetizable opportunities by deadline, prize, AI/Web3 fit, eff
 - Mantle AI DevTools readiness audit;
 - Mantle proof/deployment plan.
 
-For the Turing Test Hackathon, the repo includes a minimal `BountyPilotScoreRegistry` contract that can record the selected opportunity score, evidence URI, and evidence hash on Mantle after wallet approval.
+For the Turing Test Hackathon, the repo includes a minimal `BountyPilotScoreRegistry` contract. Its generic `recordScore` path can record the selected opportunity score, while `recordAgentAudit` can record the `80 / 100` AI audit readiness score, evidence URI, and evidence hash on Mantle after wallet approval.
 
 ## What It Does Now
 
@@ -68,6 +68,8 @@ The contract records:
 - submitter;
 - timestamp.
 
+For the deployment award path, the key callable function is `recordAgentAudit`, because it writes the AI audit result and evidence hash on-chain.
+
 Current status: contract code and dry-run transaction payload are ready. Real deployment is intentionally gated behind explicit wallet approval.
 
 ## Commands
@@ -95,12 +97,14 @@ Latest evidence hash:
 0x2ae1b9e3ba104263de612d9c104f9afd2acaf9de7ebc42027b7ac7333ce1f338
 ```
 
-The evidence pack includes the selected opportunity, score breakdown, AI DevTools readiness audit, read-only Mantle Mainnet/Sepolia chain-state checks, public artifact URLs, safety gates, and the dry-run Mantle proof record.
+The evidence pack includes the selected opportunity, score breakdown, AI DevTools readiness audit, read-only Mantle Mainnet/Sepolia chain-state checks, public artifact URLs, safety gates, and the dry-run Mantle proof record. Its `mantleProofPlan.agentAuditRecord` field includes `recordAgentAudit`, readiness score `80`, and the current evidence hash.
 
 ## What Is Next
 
 - Deploy `BountyPilotScoreRegistry` to Mantle Sepolia after wallet approval.
-- Add deployed address and explorer link to README and DoraHacks.
+- Verify the contract on Mantle Explorer.
+- Call `recordAgentAudit` with readiness score `80` and the current evidence hash.
+- Add deployed address, transaction link, and explorer link to README and DoraHacks.
 
 ## Repository
 
@@ -117,7 +121,7 @@ Demo video URL: https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/ma
 ## Short DoraHacks Copy
 
 ```text
-BountyPilot is an AI DevTools agent that ranks Web3 and AI opportunities by deadline, upside, fit, effort, proof quality, and safety risk, then generates a submission pack and Mantle-ready proof plan for agent-assisted execution.
+BountyPilot is an AI DevTools agent that ranks Web3 and AI opportunities, generates a submission pack, and prepares a Mantle-ready `recordAgentAudit` proof for writing the AI audit result and evidence hash on-chain after wallet approval.
 ```
 
 ## Long DoraHacks Copy
@@ -125,5 +129,5 @@ BountyPilot is an AI DevTools agent that ranks Web3 and AI opportunities by dead
 ```text
 BountyPilot helps builders and AI agents avoid wasting time on stale task boards, expired hackathons, vague bounties, and unsafe account flows. It scans monetizable opportunities, ranks them using an explicit scoring model, and generates the practical artifacts needed to execute: target rationale, README outline, demo script, risk flags, safety gates, and a Mantle proof/deployment plan.
 
-For The Turing Test Hackathon 2026, BountyPilot demonstrates an AI DevTools workflow: verify the official deadline, reject stale listings, score project-track fit, read public Mantle chain state, generate a submission pack, and prepare a verifiable evidence hash. The repo includes a runnable dashboard, scoring CLI, mantle:audit readiness command, mantle:data read-only RPC adapter, mantle:evidence JSON/hash generator, demo video, and a minimal Solidity contract that can record the selected score and evidence hash on Mantle after human wallet approval.
+For The Turing Test Hackathon 2026, BountyPilot demonstrates an AI DevTools workflow: verify the official deadline, reject stale listings, score project-track fit, read public Mantle chain state, generate a submission pack, and prepare a verifiable evidence hash. The repo includes a runnable dashboard, scoring CLI, mantle:audit readiness command, mantle:data read-only RPC adapter, mantle:evidence JSON/hash generator, demo video, and a minimal Solidity contract. The contract exposes `recordAgentAudit`, a callable on-chain path for writing the `80 / 100` AI audit readiness score plus the evidence URI/hash to Mantle after human wallet approval.
 ```
