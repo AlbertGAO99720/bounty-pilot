@@ -1,14 +1,10 @@
-import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { sha256Hex, stableJson } from "./hash.mjs";
 import { opportunities } from "./opportunities.mjs";
 import { rankOpportunities } from "./scoring.mjs";
 
-function stableJson(value) {
-  return JSON.stringify(value, Object.keys(value).sort(), 2);
-}
-
 export function buildMantleDeploymentPlan(opportunity, options = {}) {
-  const evidencePayload = {
+  const evidencePayload = options.evidencePayload || {
     opportunityId: opportunity.id,
     opportunityName: opportunity.name,
     deadline: opportunity.deadline,
@@ -25,9 +21,7 @@ export function buildMantleDeploymentPlan(opportunity, options = {}) {
     riskFlags: opportunity.riskFlags
   };
 
-  const evidenceHash = createHash("sha256")
-    .update(stableJson(evidencePayload))
-    .digest("hex");
+  const evidenceHash = options.evidenceHash || sha256Hex(stableJson(evidencePayload));
 
   return {
     targetNetwork: options.network || "Mantle Sepolia testnet",
@@ -38,7 +32,7 @@ export function buildMantleDeploymentPlan(opportunity, options = {}) {
     },
     dryRunRecord: {
       opportunityId: opportunity.id,
-      opportunityIdBytes32: `0x${createHash("sha256").update(opportunity.id).digest("hex")}`,
+      opportunityIdBytes32: `0x${sha256Hex(opportunity.id)}`,
       score: opportunity.score,
       evidenceURI: options.evidenceURI || "ipfs://CID_OR_PUBLIC_JSON_URL_AFTER_REPO_PUBLISH",
       evidenceHash: `0x${evidenceHash}`

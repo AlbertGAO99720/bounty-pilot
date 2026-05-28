@@ -32,7 +32,11 @@ BountyPilot ranks Web3 and AI opportunities by deadline, upside, fit, effort, pr
 
 BountyPilot helps builders and AI agents avoid wasting time on stale task boards, expired hackathons, vague bounties, and unsafe account flows. It scans monetizable opportunities, ranks them using an explicit scoring model, and generates the practical artifacts needed to execute: target rationale, README outline, demo script, risk flags, safety gates, and a Mantle proof/deployment plan.
 
-For The Turing Test Hackathon 2026, BountyPilot demonstrates an AI DevTools workflow: verify the official deadline, reject stale listings, score project-track fit, read public Mantle chain state, generate a submission pack, and prepare a verifiable evidence hash. The repo includes a runnable dashboard, scoring CLI, `mantle:audit` readiness command, `mantle:data` read-only RPC adapter, submission generator, demo video, and a minimal Solidity contract that can record the selected score and evidence hash on Mantle after human wallet approval.
+For The Turing Test Hackathon 2026, BountyPilot demonstrates an AI DevTools workflow: verify the official deadline, reject stale listings, score project-track fit, read public Mantle chain state, generate a submission pack, and prepare a verifiable evidence hash. The repo includes a runnable dashboard, scoring CLI, `mantle:audit` readiness command, `mantle:data` read-only RPC adapter, `mantle:evidence` JSON/hash generator, submission generator, demo video, and a minimal Solidity contract that can record the selected score and evidence hash on Mantle after human wallet approval.
+
+Latest evidence pack: https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/docs/evidence/latest.json
+
+Latest evidence hash: `0x998cfaba1815a15a1b35e66fb8b7c1d54e2c43f55faa08edb9e1ac6741b9baa7`
 
 ## Safety Note
 

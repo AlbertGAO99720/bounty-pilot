@@ -45,6 +45,7 @@ npm run score
 npm run demo
 npm run mantle:audit
 npm run mantle:data
+npm run mantle:evidence
 npm run mantle:plan
 ```
 
@@ -109,6 +110,20 @@ The command checks:
 
 It does not sign messages, send transactions, deploy contracts, or require private keys.
 
+## Evidence Pack
+
+BountyPilot can generate a public evidence JSON that combines the selected opportunity, ranking, Mantle audit, read-only Mantle chain data, public artifacts, safety gates, and dry-run proof record:
+
+```bash
+npm run mantle:evidence
+```
+
+Latest evidence artifact:
+
+- `docs/evidence/latest.json`
+- Evidence URI: https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/docs/evidence/latest.json
+- Evidence hash: `0x998cfaba1815a15a1b35e66fb8b7c1d54e2c43f55faa08edb9e1ac6741b9baa7`
+
 ## Safety Boundary
 
 BountyPilot is intentionally conservative:
@@ -128,6 +143,7 @@ BountyPilot is intentionally conservative:
 - `src/demo.mjs` - full submission-pack generator
 - `src/mantle-audit.mjs` - AI DevTools readiness audit for Mantle submissions
 - `src/mantle-data.mjs` - read-only Mantle RPC data adapter
+- `src/mantle-evidence.mjs` - public evidence pack and hash generator
 - `src/mantle-plan.mjs` - dry-run Mantle proof/deployment plan
 - `contracts/BountyPilotScoreRegistry.sol` - minimal on-chain score registry
 - `src/bags-plan.mjs` - legacy dry-run Bags fee-share plan

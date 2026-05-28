@@ -9,6 +9,7 @@
     "score": "node src/score.mjs",
     "mantle:audit": "node src/mantle-audit.mjs",
     "mantle:data": "node src/mantle-data.mjs",
+    "mantle:evidence": "node src/mantle-evidence.mjs --write docs/evidence/latest.json",
     "mantle:plan": "node src/mantle-plan.mjs",
     "bags:plan": "node src/bags-plan.mjs"
   },

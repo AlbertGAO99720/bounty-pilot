@@ -22,6 +22,7 @@ The contract records:
 ```bash
 npm run mantle:audit
 npm run mantle:data
+npm run mantle:evidence
 npm run mantle:plan
 ```
 
@@ -39,6 +40,21 @@ The data command outputs:
 - Mantle Sepolia chain ID and latest block;
 - block hashes and timestamps for public evidence;
 - a safety note confirming read-only mode.
+
+The evidence command writes:
+
+- `docs/evidence/latest.json`;
+- selected opportunity and score breakdown;
+- AI DevTools readiness audit;
+- read-only Mantle Mainnet and Sepolia observations;
+- public artifact URLs;
+- evidence hash for later on-chain recording.
+
+Latest evidence hash:
+
+```text
+0x998cfaba1815a15a1b35e66fb8b7c1d54e2c43f55faa08edb9e1ac6741b9baa7
+```
 
 The proof-plan command outputs:
 

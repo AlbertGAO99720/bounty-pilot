@@ -46,6 +46,7 @@ For the Turing Test Hackathon, the repo includes a minimal `BountyPilotScoreRegi
 - Generates a complete project submission pack.
 - Runs a Mantle `AI DevTools` readiness audit with explicit blockers.
 - Reads Mantle Mainnet and Mantle Sepolia public chain state without wallet access.
+- Generates a public evidence JSON and SHA-256 hash for later on-chain recording.
 - Generates a dry-run Mantle proof record.
 - Provides a local browser dashboard for demo recording.
 - Documents safety boundaries around wallets, KYC, deployment, and irreversible submissions.
@@ -76,8 +77,25 @@ npm run score
 npm run demo
 npm run mantle:audit
 npm run mantle:data
+npm run mantle:evidence
 npm run mantle:plan
 ```
+
+## Evidence Pack
+
+Latest public evidence URI:
+
+```text
+https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/docs/evidence/latest.json
+```
+
+Latest evidence hash:
+
+```text
+0x998cfaba1815a15a1b35e66fb8b7c1d54e2c43f55faa08edb9e1ac6741b9baa7
+```
+
+The evidence pack includes the selected opportunity, score breakdown, AI DevTools readiness audit, read-only Mantle Mainnet/Sepolia chain-state checks, public artifact URLs, safety gates, and the dry-run Mantle proof record.
 
 ## What Is Next
 
@@ -107,5 +125,5 @@ BountyPilot is an AI DevTools agent that ranks Web3 and AI opportunities by dead
 ```text
 BountyPilot helps builders and AI agents avoid wasting time on stale task boards, expired hackathons, vague bounties, and unsafe account flows. It scans monetizable opportunities, ranks them using an explicit scoring model, and generates the practical artifacts needed to execute: target rationale, README outline, demo script, risk flags, safety gates, and a Mantle proof/deployment plan.
 
-For The Turing Test Hackathon 2026, BountyPilot demonstrates an AI DevTools workflow: verify the official deadline, reject stale listings, score project-track fit, generate a submission pack, and prepare a verifiable evidence hash. The repo includes a runnable dashboard, scoring CLI, mantle:audit readiness command, submission generator, demo video, and a minimal Solidity contract that can record the selected score and evidence hash on Mantle after human wallet approval.
+For The Turing Test Hackathon 2026, BountyPilot demonstrates an AI DevTools workflow: verify the official deadline, reject stale listings, score project-track fit, read public Mantle chain state, generate a submission pack, and prepare a verifiable evidence hash. The repo includes a runnable dashboard, scoring CLI, mantle:audit readiness command, mantle:data read-only RPC adapter, mantle:evidence JSON/hash generator, demo video, and a minimal Solidity contract that can record the selected score and evidence hash on Mantle after human wallet approval.
 ```

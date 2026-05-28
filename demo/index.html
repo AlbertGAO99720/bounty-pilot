@@ -97,6 +97,7 @@
               <li>DoraHacks submission copy</li>
               <li>2-minute demo video script</li>
               <li>Mantle AI DevTools audit</li>
+              <li>Public evidence JSON and hash</li>
               <li>Mantle dry-run proof plan</li>
             </ul>
           </article>
@@ -125,12 +126,12 @@
           <article class="panel wide">
             <div class="panel-title">
               <span>Mantle proof plan</span>
-              <strong>no wallet signature</strong>
+              <strong>evidence hash ready</strong>
             </div>
             <div class="split">
               <div class="share">
                 <span>01</span>
-                <p>Record selected opportunity score and evidence hash</p>
+                <p>Generate public JSON evidence and SHA-256 hash</p>
               </div>
               <div class="share secondary">
                 <span>02</span>
@@ -140,7 +141,8 @@
             <pre>{
   "contract": "BountyPilotScoreRegistry",
   "network": "Mantle Sepolia testnet",
-  "evidenceURI": "ipfs://CID_OR_PUBLIC_JSON_URL",
+  "evidenceURI": "docs/evidence/latest.json",
+  "evidenceHash": "0x998c...baa7",
   "mode": "dry-run"
 }</pre>
           </article>

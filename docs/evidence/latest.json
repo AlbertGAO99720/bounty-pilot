@@ -1,0 +1,224 @@
+{
+  "evidenceHash": "0x998cfaba1815a15a1b35e66fb8b7c1d54e2c43f55faa08edb9e1ac6741b9baa7",
+  "generatedAt": "2026-05-28T02:44:58.164Z",
+  "hashAlgorithm": "sha256",
+  "hashScope": "canonical stable JSON of this evidence pack before hashAlgorithm, hashScope, evidenceHash, and mantleProofPlan are appended",
+  "mantleAudit": {
+    "blockers": [
+      "Mantle Sepolia deployment"
+    ],
+    "checks": [
+      {
+        "earned": 12,
+        "evidence": "The Turing Test Hackathon page is active until 2026-06-15.",
+        "id": "official-deadline",
+        "label": "Official DoraHacks deadline verified",
+        "status": "ready",
+        "weight": 12
+      },
+      {
+        "earned": 14,
+        "evidence": "GitHub, GitHub Pages demo, and raw demo video URLs are public.",
+        "id": "public-artifacts",
+        "label": "Public repo, demo, and video are available",
+        "status": "ready",
+        "weight": 14
+      },
+      {
+        "earned": 14,
+        "evidence": "src/scoring.mjs exposes deadline, upside, fit, proof, effort, and risk scoring.",
+        "id": "explicit-scoring",
+        "label": "Agent decision model is inspectable",
+        "status": "ready",
+        "weight": 14
+      },
+      {
+        "earned": 14,
+        "evidence": "BountyPilotScoreRegistry can record opportunity score and evidence hash.",
+        "id": "mantle-proof-surface",
+        "label": "Mantle proof surface exists",
+        "status": "dry-run-ready",
+        "weight": 18
+      },
+      {
+        "earned": 10,
+        "evidence": "No private keys, wallet signatures, KYC, or deployment are automated.",
+        "id": "safety-boundary",
+        "label": "Wallet and KYC safety gates are explicit",
+        "status": "ready",
+        "weight": 10
+      },
+      {
+        "earned": 16,
+        "evidence": "npm run mantle:data reads Mantle Mainnet and Mantle Sepolia chain state without wallet access.",
+        "id": "mantle-data-adapter",
+        "label": "Mantle-specific data adapter",
+        "status": "ready",
+        "weight": 16
+      },
+      {
+        "earned": 0,
+        "evidence": "Requires Michael's explicit wallet approval and funded testnet address.",
+        "id": "testnet-deployment",
+        "label": "Mantle Sepolia deployment",
+        "status": "needs-wallet-approval",
+        "weight": 16
+      }
+    ],
+    "dorahacksCopy": "BountyPilot is an AI DevTools agent that audits Web3 hackathon opportunities before a builder spends time or gas. It verifies official deadlines, scores fit and risk, generates a submission pack, and prepares a Mantle evidence hash that can be recorded on-chain after wallet approval.",
+    "maxScore": 100,
+    "nextPatch": "Deploy BountyPilotScoreRegistry to Mantle Sepolia after wallet approval and add the explorer link to the submission.",
+    "opportunityId": "mantle-turing-test-2026",
+    "opportunityName": "The Turing Test Hackathon 2026",
+    "readinessScore": 80,
+    "recommendedTrack": "AI DevTools",
+    "verdict": "Submission-ready as a dry-run AI DevTools prototype with read-only Mantle data; strongest remaining upgrade is approved testnet deployment."
+  },
+  "mantleData": {
+    "generatedAt": "2026-05-28T02:44:58.164Z",
+    "mode": "read-only",
+    "networks": [
+      {
+        "expectedChainId": 5000,
+        "explorer": "https://explorer.mantle.xyz",
+        "latestBlock": 95902991,
+        "latestBlockHash": "0x6971c65b9e42195d518ce511853cf51d08e4c23a197197f1205184a84e171564",
+        "latestBlockTimestamp": "2026-05-28T02:44:54.000Z",
+        "name": "Mantle Mainnet",
+        "observedChainId": 5000,
+        "rpc": "https://rpc.mantle.xyz",
+        "transportFallback": "curl"
+      },
+      {
+        "expectedChainId": 5003,
+        "explorer": "https://explorer.sepolia.mantle.xyz",
+        "latestBlock": 39195808,
+        "latestBlockHash": "0x00ca6b0338cd6a510e0f4d020e6169f9e79df1b7e8156259e2cc4877eb07da75",
+        "latestBlockTimestamp": "2026-05-28T02:44:49.000Z",
+        "name": "Mantle Sepolia",
+        "observedChainId": 5003,
+        "rpc": "https://rpc.sepolia.mantle.xyz",
+        "transportFallback": "curl"
+      }
+    ],
+    "safety": "No wallet, private key, signature, transaction, or deployment is used."
+  },
+  "mantleProofPlan": {
+    "contract": {
+      "name": "BountyPilotScoreRegistry",
+      "path": "contracts/BountyPilotScoreRegistry.sol",
+      "purpose": "Records the selected opportunity score, evidence URI, and evidence hash on-chain."
+    },
+    "dryRunRecord": {
+      "evidenceHash": "0x998cfaba1815a15a1b35e66fb8b7c1d54e2c43f55faa08edb9e1ac6741b9baa7",
+      "evidenceURI": "https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/docs/evidence/latest.json",
+      "opportunityId": "mantle-turing-test-2026",
+      "opportunityIdBytes32": "0x91af48c5e7e96b5f4e9c91dc24e10d311d7497ff2e16ed600f1fc68e5aa4f2ae",
+      "score": 123
+    },
+    "submissionGates": [
+      "Publish repository and demo first.",
+      "Only deploy the contract after Michael approves wallet use.",
+      "Use testnet before any mainnet transaction.",
+      "Do not store private keys in the repo or shell history.",
+      "DoraHacks final submission remains manual if captcha, KYC, or profile data appears."
+    ],
+    "targetNetwork": "Mantle Sepolia testnet"
+  },
+  "mode": "read-only-dry-run",
+  "publicArtifacts": {
+    "demo": "https://albertgao99720.github.io/bounty-pilot/demo/",
+    "demoVideo": "https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/bounty-pilot-demo.mp4",
+    "evidenceURI": "https://raw.githubusercontent.com/AlbertGAO99720/bounty-pilot/main/docs/evidence/latest.json",
+    "repository": "https://github.com/AlbertGAO99720/bounty-pilot"
+  },
+  "ranking": [
+    {
+      "daysLeft": 19,
+      "deadline": "2026-06-15",
+      "id": "mantle-turing-test-2026",
+      "name": "The Turing Test Hackathon 2026",
+      "riskFlagCount": 4,
+      "score": 123,
+      "status": "active"
+    },
+    {
+      "daysLeft": 33,
+      "deadline": "2026-06-29",
+      "id": "uipath-agenthack-2026",
+      "name": "UiPath Global AgentHack 2026",
+      "riskFlagCount": 2,
+      "score": 77,
+      "status": "active"
+    },
+    {
+      "daysLeft": null,
+      "deadline": null,
+      "id": "web3-career-opportunity-pool",
+      "name": "web3.career AI/Product opportunity pool",
+      "riskFlagCount": 2,
+      "score": 66,
+      "status": "active"
+    },
+    {
+      "daysLeft": 15,
+      "deadline": "2026-06-11",
+      "id": "nandahack-agentic-ai-2026",
+      "name": "NandaHack Agentic AI Hackathon",
+      "riskFlagCount": 2,
+      "score": 64,
+      "status": "active"
+    },
+    {
+      "daysLeft": -15,
+      "deadline": "2026-05-12",
+      "id": "bags-hackathon-2026",
+      "name": "The Bags Hackathon",
+      "riskFlagCount": 3,
+      "score": -85,
+      "status": "expired"
+    }
+  ],
+  "safetyBoundary": [
+    "No wallet, private key, seed phrase, signature, transaction, or deployment is used.",
+    "No KYC, identity document, personal-data gate, captcha bypass, or platform-rule bypass is automated.",
+    "Any Mantle Sepolia or mainnet deployment requires explicit human wallet approval."
+  ],
+  "schemaVersion": "bounty-pilot-evidence-v0.1",
+  "selectedOpportunity": {
+    "daysLeft": 19,
+    "deadline": "2026-06-15",
+    "id": "mantle-turing-test-2026",
+    "name": "The Turing Test Hackathon 2026",
+    "prize": "$100K Phase 2 prize pool on DoraHacks; $120K total across phases in announcement copy",
+    "requirements": [
+      "Submit open-source repo, runnable demo, and project pitch",
+      "Deploy on Mantle Network for Grand Champion, Alpha/Data, and AI/RWA tracks",
+      "Use Mantle on-chain data as a core data source for Alpha/Data",
+      "Build AI DevTools such as submission audits, smart gas tooling, or Mantle-specific assistants",
+      "Use Byreal Agent Skills, Byreal Perps CLI, or RealClaw for Agentic Economy",
+      "Demo video or public frontend link required for UI/deployment awards"
+    ],
+    "riskFlags": [
+      "DoraHacks login required for final submission",
+      "Competitive prize, not guaranteed income",
+      "Mantle deployment needs a wallet and testnet/mainnet transaction approval",
+      "Byreal/RealClaw integration may require additional account or SDK setup"
+    ],
+    "score": 123,
+    "scoreBreakdown": {
+      "deadlineScore": 6,
+      "effortPenalty": 9,
+      "fitScore": 60,
+      "inactivePenalty": 0,
+      "proofScore": 30,
+      "riskPenalty": 8,
+      "speedScore": 8,
+      "upsideScore": 36
+    },
+    "source": "DoraHacks official page, verified 2026-05-28",
+    "status": "active",
+    "type": "hackathon",
+    "url": "https://dorahacks.io/hackathon/mantleturingtesthackathon2026/detail"
+  }
+}
